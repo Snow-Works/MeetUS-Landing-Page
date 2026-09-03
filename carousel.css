@@ -539,3 +539,227 @@ body {
         margin-bottom: 12px;
     }
 }
+
+
+
+
+
+
+/* CONNECTION SECTION STYLING */
+
+
+.pixel-grade-section {
+    width: 100%;
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+.pixel-grade-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.pixel-grade-image {
+    flex: 0 0 45%;
+    max-width: 45%;
+}
+
+.pixel-grade-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.pixel-grade-content {
+    flex: 1;
+    max-width: 50%;
+}
+
+.pixel-grade-content h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #263238;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.pixel-grade-content p {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #4D4D4D;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.pixel-grade-link {
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--navbar-button-primary);
+    text-decoration: none;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.pixel-grade-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--navbar-button-primary);
+    transition: width 0.3s ease;
+}
+
+.pixel-grade-link:hover {
+    color: #1E8C6A;
+}
+
+.pixel-grade-link:hover::after {
+    width: 100%;
+}
+
+
+
+
+
+/* CONNECTION SECTION RESPONSIVENESS */
+
+/* Laptop and desktop screen sizes */
+
+@media (max-width: 1024px) {
+    .pixel-grade-section {
+        padding: 60px 0;
+    }
+
+    .pixel-grade-container {
+        gap: 40px;
+    }
+
+    .pixel-grade-content h2 {
+        font-size: 2rem;
+    }
+
+    .pixel-grade-content p {
+        font-size: 0.95rem;
+    }
+}
+
+
+/* tablet screen size */
+
+@media (max-width: 768px) {
+    .pixel-grade-section {
+        padding: 50px 0;
+    }
+
+    .pixel-grade-container {
+        gap: 30px;
+    }
+
+    .pixel-grade-image {
+        flex: 0 0 42%;
+        max-width: 42%;
+    }
+
+    .pixel-grade-content {
+        max-width: 55%;
+    }
+
+    .pixel-grade-content h2 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+
+    .pixel-grade-content p {
+        font-size: 0.9rem;
+        margin-bottom: 25px;
+        line-height: 1.6;
+    }
+
+    .pixel-grade-link {
+        font-size: 0.95rem;
+    }
+}
+
+
+/* mobile screen sizes */
+
+@media (max-width: 480px) {
+    .pixel-grade-section {
+        padding: 40px 0;
+    }
+
+    .pixel-grade-container {
+        gap: 20px;
+        padding: 0 4%;
+    }
+
+    .pixel-grade-image {
+        flex: 0 0 40%;
+        max-width: 40%;
+    }
+
+    .pixel-grade-content {
+        max-width: 57%;
+    }
+
+    .pixel-grade-content h2 {
+        font-size: 1.3rem;
+        margin-bottom: 12px;
+    }
+
+    .pixel-grade-content p {
+        font-size: 0.8rem;
+        margin-bottom: 20px;
+        line-height: 1.5;
+    }
+
+    .pixel-grade-link {
+        font-size: 0.85rem;
+    }
+}
+
+
+/* very small phones */
+
+@media (max-width: 360px) {
+    .pixel-grade-section {
+        padding: 30px 0;
+    }
+
+    .pixel-grade-container {
+        gap: 15px;
+        padding: 0 3%;
+    }
+
+    .pixel-grade-image {
+        flex: 0 0 38%;
+        max-width: 38%;
+    }
+
+    .pixel-grade-content {
+        max-width: 60%;
+    }
+
+    .pixel-grade-content h2 {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+    }
+
+    .pixel-grade-content p {
+        font-size: 0.7rem;
+        margin-bottom: 15px;
+        line-height: 1.5;
+    }
+
+    .pixel-grade-link {
+        font-size: 0.75rem;
+    }
+}
