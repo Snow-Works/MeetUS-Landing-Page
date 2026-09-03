@@ -1,0 +1,61 @@
+:root {
+    --navbar-button-primary: #28CB8B;
+    --navbar-button-hover: #237D31;
+    --hero-section-btn1: #388E3B;
+    --hero-section-btn2: #273D31;
+    --logo-title: #263238;
+    --neutral-title-neutral-grey: #4D4D4D;
+    --hero-section-background: #F5F7FA;
+    --body-background: #ffffff;
+
+}
+
+body {
+    font-family: inter, sans-serif;
+    background-color: #F5F5F5;
+    color: var(--neutral-title-neutral-grey);
+    scroll-behavior: smooth;
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+
+/* OUR CLIENTS CAROUSEL SECTION */
+
+.clients-section {
+    width: 100%;
+    padding: 80px 0;
+    background-color: var(--body-background);
+}
+
+.clients-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+/*  carousel header */
+
+.clients-heading {
+    text-align: center;
+    margin-bottom: 50px;
+
+
+}
+
+.clients-heading h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--neutral-title-neutral-grey);
+    margin-bottom: 10px;
+}
+
+.clients-heading p {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--neutral-title-neutral-grey);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
