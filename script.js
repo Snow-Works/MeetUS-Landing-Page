@@ -116,7 +116,7 @@ document.addEventListener("keydown", (event) => {
 
 const slides = document.querySelectorAll('.hero-slide');
 const indicators= document.querySelectorAll('.hero-indicator');
-const heroCarousel = document.getElementById('.heroCarousel');
+const heroCarousel = document.getElementById('heroCarousel');
 
 let currentSlide = 0;  // this is indicating which slide is active wether (0, 1, 0r 2)
 const totalSlides = 3; // this is indicating the total number of slides we have 
@@ -274,5 +274,7 @@ function initCarousel() {
     console.log(`⏱️ Auto-play: 6 seconds per slide`);
 }
 
-// Start the carousel when the page loads
-initCarousel();
+// Start the carousel when the DOM is fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+    initCarousel();
+});

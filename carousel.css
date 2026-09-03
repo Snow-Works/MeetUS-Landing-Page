@@ -59,3 +59,238 @@ body {
     line-height: 1.6;
 }
 
+
+/* SCROLLING LOGO  WRAPPER SECTION */
+
+.scroll-track-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 20px 0;
+}
+
+
+/* moving element section */
+
+.scroll-track {
+    display: flex;
+    gap: 40px;
+    width: max-content;
+    animation: scrollLogos 25s linear infinite;
+}
+
+/* each logo styling */
+
+.logo-item {
+    flex-shrink: 0;
+    width: 140px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* smooth animation for hover effects */
+    cursor: pointer;
+
+}
+
+.logo-image {
+    width: 25%;
+    height: 100%;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 1;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+
+/*  3D HOVER EFFECT ON THE LOGO SECTION */
+
+
+.logo-item:hover .logo-image {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.05) rotateY(5deg);
+}
+
+.logo-item:hover {
+    transform: perspective(500px) translateY(-5px);
+    filter: drop-shadow(0 12px 30px rgba(0, 0, 0, 0.15));
+}
+
+
+
+/* SCROLL ANIMATION  FOR LOGO SECTION */
+
+@keyframes scrollLogos {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-40%);
+    }
+}
+
+/* Pause animation on hover */
+.scroll-track-wrapper:hover .scroll-track {
+    animation-play-state: paused;
+}
+
+
+
+
+/*  CAROUSEL SECTION RESPONSIVENESS */
+
+
+/* carousel laptop screen size */
+
+@media (max-width: 1024px) {
+    .clients-section {
+        padding: 60px 0;
+    }
+
+    .clients-heading h2 {
+        font-size: 2.2rem;
+    }
+
+    .clients-heading p {
+        font-size: 1rem;
+        max-width: 500px;
+    }
+
+    .logo-item {
+        width: 110px;
+        height: 65px;
+    }
+
+    .scroll-track {
+        gap: 30px;
+    }
+}
+
+
+
+/*  carousel tablet screen responsiveness */
+
+@media (max-width: 768px) {
+    .clients-section {
+        padding: 50px 0;
+    }
+
+    .clients-heading {
+        margin-bottom: 30px;
+    }
+
+    .clients-heading h2 {
+        font-size: 1.8rem;
+    }
+
+    .clients-heading p {
+        font-size: 0.95rem;
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    .logo-item {
+        width: 85px;
+        height: 55px;
+    }
+
+    .scroll-track {
+        gap: 25px;
+    }
+
+    .scroll-track-wrapper {
+        padding: 15px 0;
+    }
+}
+
+
+/* carousel mobile screen responsiveness */
+
+@media (max-width: 480px) {
+    .clients-section {
+        padding: 40px 0;
+    }
+
+    .clients-heading h2 {
+        font-size: 1.5rem;
+    }
+
+    .clients-heading p {
+        font-size: 0.85rem;
+        line-height: 1.5;
+    }
+
+    .logo-item {
+        width: 65px;
+        height: 45px;
+    }
+
+    .scroll-track {
+        gap: 18px;
+    }
+
+    .scroll-track-wrapper {
+        padding: 10px 0;
+    }
+}
+
+
+/* carousel very small screen size  responsiveness */
+
+@media (max-width: 360px) {
+    .clients-section {
+        padding: 30px 0;
+    }
+
+    .clients-heading h2 {
+        font-size: 1.2rem;
+    }
+
+    .clients-heading p {
+        font-size: 0.75rem;
+    }
+
+    .logo-item {
+        width: 50px;
+        height: 35px;
+    }
+
+    .scroll-track {
+        gap: 14px;
+    }
+
+    .scroll-track-wrapper {
+        padding: 8px 0;
+    }
+}
+
+
+/*  MOBILE SCREEN SIZE ANIMATION ADJUSTMENT */
+
+@media (max-width: 768px) {
+    .scroll-track {
+        animation-duration: 20s;  /* Faster on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .scroll-track {
+        animation-duration: 18s;  /* Even faster on small phones */
+    }
+}
+
+
+
+/* Touch device support  (tap to show color) */
+.logo-item:active .logo-image {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.05) rotateY(5deg);
+}
+
+.logo-item:active {
+    transform: perspective(500px) translateY(-5px);
+    filter: drop-shadow(0 12px 30px rgba(0, 0, 0, 0.15));
+}
+
