@@ -1,0 +1,831 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --navbar-button-primary: #28CB8B;
+    --navbar-button-hover: #237D31;
+    --hero-section-btn1: #388E3B;
+    --hero-section-btn2: #273D31;
+    --logo-title: #263238;
+    --neutral-title-neutral-grey: #4D4D4D;
+    --hero-section-background: #F5F7FA;
+    --body-background: #ffffff;
+
+}
+
+body {
+    font-family: inter, sans-serif;
+    background-color: #F5F5F5;
+    color: var(--neutral-title-neutral-grey);
+    scroll-behavior: smooth;
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+.nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--body-background);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    z-index: 1000;
+}
+
+.nav-header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--logo-title);
+}
+
+.nav-header .nav-branding {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-header .nav-button {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+
+.nav-button .nav-btn {
+    background: var(--navbar-button-primary);
+    color: #ffffff;
+    border: none;
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 18px 30px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.nav-header .nav-button .nav-btn:hover {
+    background-color: var(--navbar-button-hover);
+    transition: 0.3s ease;
+}
+
+.nav-button {
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+
+}
+
+
+
+
+
+/* Navigation Menu and links Section */
+
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    gap: 6rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--neutral-title-neutral-grey);
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--navbar-button-primary);
+}
+
+
+
+/* buttons in the hamburger menu */
+
+.ham-nav-button {
+    display: none;
+}
+
+
+/* MENU OVERLAY (Backdrop Blur) */
+
+.menu-overlay {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1040;  /* Below menu (1050) but above everything else */
+    pointer-events: none;
+}
+
+.menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+
+
+/* HAMBURGER SECTION */
+
+
+.hamburger-menu {
+    width: 44px;
+    height: 44px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1100;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #263238;
+    border-radius: 10px;
+    transition: transform 0.3s ease, opacity 0.2s ease, width 0.3s ease;
+}
+
+
+
+
+/* HAMBURGER X MOVEMENT  */
+.hamburger-menu.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger-menu.active .bar:nth-child(2) {
+    opacity: 0;
+    width: 0;
+}
+
+.hamburger-menu.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* HAMBURGER FOR TABLET SCREEN */
+@media (max-width: 900px) {
+    .nav-header {
+        padding: 0 4%;
+    }
+
+    .nav-links {
+        gap: 20px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .nav-btn {
+        padding: 11px 15px;
+    }
+
+    .ham-nav-button {
+        display: none;
+    }
+}
+
+
+
+/* HAMBURGER FOR MOBILE SCREEN SIZE   */
+@media (max-width: 768px) {
+    .nav-header {
+        min-height: 70px;
+        padding: 0 5%;
+    }
+
+    /* Hide desktop register button */
+    .nav-button {
+        display: none;
+    }
+
+    /* Show hamburger */
+    .hamburger-menu {
+        display: flex;
+    }
+
+    /* MOBILE MENU */
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        padding: 25px 5% 30px;
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        border-top: 1px solid #eeeeee;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+        /* Hidden state */
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-15px);
+        pointer-events: none;
+        transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+        z-index: 1050;
+    }
+
+    /* Open state */
+    .nav-links.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+
+    /* Mobile links */
+    .nav-links a {
+        width: 100%;
+        padding: 16px 5px;
+        font-size: 16px;
+        border-bottom: 1px solid #f1f1f1;
+        transition: color 0.2s ease, padding-left 0.2s ease;
+        background: transparent;
+    }
+
+    .nav-links a:last-child {
+        border-bottom: none;
+    }
+
+    .nav-links a:hover {
+        color: #4caf4f;
+        padding-left: 10px;
+        transform: none;
+    }
+    
+    /* Hide the main desktop register button */
+    .nav-button .nav-btn {
+        display: none; 
+    }
+
+
+    /* buttons in the hamburger menu */
+    .ham-nav-button {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 20px;
+
+    }
+
+    .ham-nav-btn {
+        background: var(--navbar-button-primary);
+        color: #ffffff;
+        border: none;
+        max-width: 80%;
+        width: 250px;
+        font-size: 1rem;
+        font-weight: 400;
+        padding: 15px 6px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+
+
+    }
+
+}
+
+/* HAMBURGER FOR SMALL PHONES */
+@media (max-width: 400px) {
+    .nav-header {
+        padding: 0 4%;
+    }
+
+    .nav-logo {
+        width: 30px;
+        height: 30px;
+    }
+
+    .nav-branding h1 {
+        font-size: 21px;
+    }
+
+    .hamburger-menu {
+        width: 40px;
+        height: 40px;
+    }
+
+    .bar {
+        width: 23px;
+    }
+
+    /* Hide the main desktop register button */
+    .nav-button .nav-btn {
+        display: none; 
+    }
+
+}
+
+/* HAMBURGER FOR VERY SMALL SCREENS */
+@media (max-width: 280px) {
+    .nav-branding {
+        gap: 6px;
+    }
+
+    .nav-branding h1 {
+        font-size: 18px;
+    }
+
+    .nav-logo {
+        width: 26px;
+        height: 26px;
+    }
+
+    .hamburger-menu {
+        width: 36px;
+    }
+
+    .bar {
+        width: 21px;
+    }
+
+    /* Hide the main desktop register button */
+    .nav-button .nav-btn {
+        display: none; 
+    }
+
+    
+}
+
+
+
+
+/* HERO SECTION */
+
+/* HERO SECTION  CAROUSEL */
+
+.hero-carousel {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    background-color: var(--hero-section-background);
+    overflow: hidden;
+
+}
+
+/* hero slides section */
+
+.hero-slides {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* positioning the first slide */
+
+.hero-slide {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 9%;
+    position: absolute;
+    inset: 0;
+
+}
+
+/* hero slide visibility */
+
+/* Inactive slides are hidden */
+.hero-slide {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(50px);
+    transition: opacity 0.6s ease, 
+                transform 0.6s ease, 
+                visibility 0.6s ease;
+}
+
+/* Active slide is visible */
+.hero-slide.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+/* hero section content */
+
+.hero-content {
+    width: 50%;
+    max-width:600px;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--logo-title);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.hero-title span {
+    color: var(--navbar-button-primary);
+}
+
+.hero-description {
+
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--neutral-title-neutral-grey);
+    line-height: 1.6;
+    max-width: 85%;
+    margin-bottom: 2rem;
+}
+
+
+/* hero button section */
+
+.hero-btn {
+    margin-top: 0.5rem;
+    background: var(--navbar-button-primary);
+    color: #ffffff;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 16px 32px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    transform: 0.2s ease;
+
+}
+
+
+
+
+/* hero section slide buttons ( for each slide ) */
+
+/* Base button (Slide 1) */
+
+.hero-btn {
+    background: var(--navbar-button-primary);
+    color: #ffffff;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 16px 32px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.hero-btn:hover {
+    background-color: var(--navbar-button-hover);
+    transform: translateY(-2px);
+}
+
+/* Slide 2 - Blue (Technology/Solution) */
+
+.hero-btn-secondary {
+    background: var(--navbar-button-primary);
+}
+
+.hero-btn-secondary:hover {
+    background: var(--navbar-button-hover);
+    transform: translateY(-2px);
+}
+
+/* Slide 3 - Orange (Community/Action) */
+
+.hero-btn-accent {
+    background: var(--navbar-button-primary);
+}
+
+.hero-btn-accent:hover {
+    background: var(--navbar-button-hover);
+    transform: translateY(-2px);
+}
+
+
+
+
+
+
+
+/* the image on the right side of the carousel */
+.hero-visual {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    object-fit: contain;
+
+}
+
+
+/* Hero section indicators */
+
+.hero-indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+/* each hero indicator */
+
+.hero-indicator {
+    width: 10px;
+    height:10px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--neutral-title-neutral-grey);
+}
+
+/* when the indicator is active */
+
+.hero-indicator.active {
+    background-color: var(--navbar-button-primary);
+
+}
+
+.hero-indicator:hover {
+    transform: scale(1.1);
+}
+
+.hero-indicator.active:hover {
+    transform: scale(1.05);
+
+}
+
+
+
+
+
+/*  HERO SECTION AND RESPONSIVENESS SCALING */
+
+/* Tablet and smaller screens */
+
+@media (max-width: 1024px) {
+    .hero-carousel {
+        height: 420px;  /* Reduced height */
+    }
+
+    .hero-slide {
+        padding: 0 6%;  /* Slightly less padding */
+    }
+
+    .hero-title {
+        font-size: 2.8rem;  /* Smaller heading */
+        line-height: 1.2;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+        max-width: 90%;
+        margin-bottom: 1.2rem;
+    }
+
+    .hero-content {
+        width: 48%;
+        max-width: 500px;
+    }
+
+    .hero-visual {
+        width: 48%;
+    }
+
+    .hero-image {
+        max-width: 420px;  /* Smaller image */
+    }
+
+    .hero-btn {
+        padding: 14px 28px;
+        font-size: 0.95rem;
+    }
+
+    .hero-indicators {
+        bottom: 15px;
+        gap: 8px;
+    }
+
+    .hero-indicator {
+        width: 10px;
+        height: 10px;
+    }
+
+    .hero-indicator.active {
+        width: 24px;
+    }
+}
+
+
+/* Mobile screens */
+
+@media (max-width: 768px) {
+    .hero-carousel {
+        height: 380px;  /* Further reduced height */
+        min-height: 340px;
+    }
+
+    .hero-slide {
+        padding: 0 5%;  /* Even less padding */
+        gap: 20px;  /* Space between text and image */
+    }
+
+    .hero-title {
+        font-size: 2rem;  /* Much smaller heading */
+        line-height: 1.3;
+        margin-bottom: 0.6rem;
+    }
+
+    .hero-description {
+        font-size: 0.9rem;
+        max-width: 95%;
+        margin-bottom: 1rem;
+        line-height: 1.5;
+    }
+
+    .hero-content {
+        width: 50%;
+        max-width: 400px;
+    }
+
+    .hero-visual {
+        width: 45%;
+        max-width: 350px;
+    }
+
+    .hero-image {
+        max-width: 100%;  /* Image fills its container */
+        max-height: 200px;  /* Prevent image from being too tall */
+    }
+
+    .hero-btn {
+        padding: 12px 24px;
+        font-size: 0.85rem;
+        margin-top: 0.3rem;
+    }
+
+    .hero-indicators {
+        bottom: 10px;
+        gap: 6px;
+    }
+
+    .hero-indicator {
+        width: 8px;
+        height: 8px;
+    }
+
+    .hero-indicator.active {
+        width: 20px;
+    }
+}
+
+
+/* Small phones */
+
+@media (max-width: 480px) {
+    .hero-carousel {
+        height: 320px;
+        min-height: 280px;
+    }
+
+    .hero-slide {
+        padding: 0 4%;
+        gap: 12px;
+    }
+
+    .hero-title {
+        font-size: 1.5rem;
+        line-height: 1.3;
+        margin-bottom: 0.4rem;
+    }
+
+    .hero-description {
+        font-size: 0.75rem;
+        max-width: 100%;
+        margin-bottom: 0.6rem;
+        line-height: 1.4;
+    }
+
+    .hero-content {
+        width: 52%;
+        max-width: 300px;
+    }
+
+    .hero-visual {
+        width: 42%;
+        max-width: 200px;
+    }
+
+    .hero-image {
+        max-height: 120px;  /* Keep image small */
+    }
+
+    .hero-btn {
+        padding: 8px 16px;
+        font-size: 0.7rem;
+        border-radius: 3px;
+        margin-top: 0.2rem;
+    }
+
+    .hero-indicators {
+        bottom: 8px;
+        gap: 5px;
+    }
+
+    .hero-indicator {
+        width: 6px;
+        height: 6px;
+    }
+
+    .hero-indicator.active {
+        width: 16px;
+    }
+}
+
+
+/* Very small screens (under 360px) */
+
+@media (max-width: 360px) {
+    .hero-carousel {
+        height: 280px;
+        min-height: 240px;
+    }
+
+    .hero-slide {
+        padding: 0 3%;
+        gap: 8px;
+    }
+
+    .hero-title {
+        font-size: 1.2rem;
+        margin-bottom: 0.3rem;
+    }
+
+    .hero-description {
+        font-size: 0.65rem;
+        margin-bottom: 0.4rem;
+    }
+
+    .hero-content {
+        width: 55%;
+        max-width: 250px;
+    }
+
+    .hero-visual {
+        width: 40%;
+        max-width: 150px;
+    }
+
+    .hero-image {
+        max-height: 100px;
+    }
+
+    .hero-btn {
+        padding: 6px 12px;
+        font-size: 0.6rem;
+    }
+
+    .hero-indicators {
+        bottom: 5px;
+        gap: 4px;
+    }
+
+    .hero-indicator {
+        width: 5px;
+        height: 5px;
+    }
+
+    .hero-indicator.active {
+        width: 12px;
+    }
+}
