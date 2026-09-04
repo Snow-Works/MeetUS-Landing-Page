@@ -915,3 +915,198 @@ body {
 .stat-item:active .stat-label {
     color: var(--navbar-button-primary);
 }
+
+
+
+
+
+
+/* STATISTICS RESPONSIVENESS SECTION */
+
+/* Laptop and desktop screen size */
+
+@media (max-width: 1024px) {
+    .helping-section {
+        padding: 60px 0;
+    }
+
+    .helping-container {
+        gap: 40px;
+    }
+
+    .helping-text h2 {
+        font-size: 2rem;
+    }
+
+    .helping-text p {
+        font-size: 0.95rem;
+    }
+
+    .stat-number {
+        font-size: 1.8rem;
+    }
+
+    .stat-label {
+        font-size: 0.9rem;
+    }
+
+    .stat-icon {
+        width: 45px;
+        height: 45px;
+    }
+
+    .helping-stats {
+        gap: 25px 30px;
+    }
+}
+
+
+/* Tablet screen size */
+
+@media (max-width: 768px) {
+    .helping-section {
+        padding: 50px 0;
+    }
+
+    .helping-container {
+        gap: 30px;
+    }
+
+    .helping-text {
+        flex: 0 0 42%;
+        max-width: 42%;
+    }
+
+    .helping-text h2 {
+        font-size: 1.5rem;
+        margin-bottom: 12px;
+    }
+
+    .helping-text p {
+        font-size: 0.85rem;
+    }
+
+    .stat-number {
+        font-size: 1.3rem;
+    }
+
+    .stat-label {
+        font-size: 0.75rem;
+    }
+
+    .stat-icon {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 8px;
+    }
+
+    .stat-item {
+        padding: 10px 5px;
+    }
+
+    .helping-stats {
+        gap: 20px 20px;
+    }
+}
+
+
+/* mobile screen size */
+
+@media (max-width: 480px) {
+    .helping-section {
+        padding: 40px 0;
+    }
+
+    .helping-container {
+        gap: 20px;
+        padding: 0 4%;
+    }
+
+    .helping-text {
+        flex: 0 0 40%;
+        max-width: 40%;
+    }
+
+    .helping-text h2 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+
+    .helping-text p {
+        font-size: 0.75rem;
+    }
+
+    .stat-number {
+        font-size: 1.1rem;
+    }
+
+    .stat-label {
+        font-size: 0.65rem;
+    }
+
+    .stat-icon {
+        width: 35px;
+        height: 35px;
+        margin-bottom: 6px;
+    }
+
+    .stat-item {
+        padding: 8px 4px;
+        border-radius: 8px;
+    }
+
+    .helping-stats {
+        gap: 15px 15px;
+    }
+}
+
+
+/* very small screen size  */
+
+@media (max-width: 360px) {
+    .helping-section {
+        padding: 30px 0;
+    }
+
+    .helping-container {
+        gap: 15px;
+        padding: 0 3%;
+    }
+
+    .helping-text {
+        flex: 0 0 38%;
+        max-width: 38%;
+    }
+
+    .helping-text h2 {
+        font-size: 1rem;
+        margin-bottom: 8px;
+    }
+
+    .helping-text p {
+        font-size: 0.65rem;
+    }
+
+    .stat-number {
+        font-size: 0.95rem;
+    }
+
+    .stat-label {
+        font-size: 0.55rem;
+    }
+
+    .stat-icon {
+        width: 30px;
+        height: 30px;
+        margin-bottom: 5px;
+    }
+
+    .stat-item {
+        padding: 6px 3px;
+        border-radius: 6px;
+    }
+
+    .helping-stats {
+        gap: 10px 10px;
+    }
+}
