@@ -10,14 +10,6 @@
 
 }
 
-body {
-    font-family: inter, sans-serif;
-    background-color: #F5F5F5;
-    color: var(--neutral-title-neutral-grey);
-    scroll-behavior: smooth;
-    max-width: 1800px;
-    margin: 0 auto;
-}
 
 
 /* OUR CLIENTS CAROUSEL SECTION */
