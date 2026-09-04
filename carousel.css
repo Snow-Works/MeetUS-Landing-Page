@@ -46,7 +46,7 @@ body {
 .clients-heading h2 {
     font-size: 2.5rem;
     font-weight: 700;
-    color: var(--neutral-title-neutral-grey);
+    color: var(--logo-title);
     margin-bottom: 10px;
 }
 
@@ -762,4 +762,156 @@ body {
     .pixel-grade-link {
         font-size: 0.75rem;
     }
+}
+
+
+
+
+/* PRODUCT STATISTICS SECTION FOR LANDING PAGE  */
+
+
+.helping-section {
+    width: 100%;
+    padding: 80px 0;
+    background-color: var(--hero-section-background);
+}
+
+
+.helping-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+
+.helping-text {
+    flex: 0 0 45%;
+    max-width: 45%;
+}
+
+.helping-text h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--logo-title);
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+
+
+.helping-text p {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--neutral-title-neutral-grey);
+    line-height: 1.6;
+}
+
+
+/* the stat content section */
+
+.helping-stats {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 40px;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 15px 10px;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.46, 0.45, 0.94);
+    cursor: default;
+}
+
+.stats-icon {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+
+.stat-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+
+.stat-number {
+    display: block;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #263238;
+    line-height: 1.2;
+    margin-bottom: 4px;
+    transition: color 0.4s ease;
+}
+
+
+.stat-label {
+    display: block;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--neutral-title-neutral-grey);
+    transition: color 0.4s ease;
+}
+
+
+/* HOVER EFFECTS FOR THE STATISTICS SECTION */
+
+.stat-item:hover {
+    transform: translateY(-6px);
+    background: rgba(40, 203, 139, 0.06);
+    box-shadow: 0 8px 25px rgba(40, 203, 139, 0.10);
+}
+
+.stat-item:hover .stat-icon {
+    transform: scale(1.10) rotate(-5deg);
+}
+
+.stat-item:hover .stat-icon img {
+    transform: scale(1.10);
+}
+
+.stat-item:hover .stat-number {
+    color: var(--navbar-button-primary);
+}
+
+.stat-item:hover .stat-label {
+    color: var(--navbar-button-primary);
+}
+
+
+
+
+/* Touch device supporT, tap to show effect ( FOR MOBILE AND TABLET DEVICES ONLY) */
+
+
+.stat-item:active {
+    transform: translateY(-6px);
+    background: rgba(40, 203, 139, 0.06);
+    box-shadow: 0 8px 25px rgba(40, 203, 139, 0.10);
+}
+
+.stat-item:active .stat-icon {
+    transform: scale(1.10) rotate(-5deg);
+}
+
+.stat-item:active .stat-icon img {
+    transform: scale(1.10);
+}
+
+.stat-item:active .stat-number {
+    color: var(--navbar-button-primary);
+}
+
+.stat-item:active .stat-label {
+    color: var(--navbar-button-primary);
 }
