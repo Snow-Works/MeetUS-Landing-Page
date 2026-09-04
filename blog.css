@@ -613,3 +613,415 @@
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+/* ================================
+   FOOTER
+================================ */
+
+.footer {
+    width: 100%;
+    background-color: #263238;
+    padding: 60px 0 0;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+}
+
+/* ================================
+   BRAND COLUMN
+================================ */
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-logo img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.footer-logo span {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.footer-tagline {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* ================================
+   SOCIAL ICONS
+================================ */
+
+.footer-social {
+    display: flex;
+    gap: 12px;
+    margin-top: 4px;
+}
+
+.footer-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.08);
+    transition: all 0.3s ease;
+}
+
+.footer-social a:hover {
+    background-color: var(--navbar-button-primary);
+    transform: translateY(-3px);
+}
+
+.footer-social a svg {
+    width: 18px;
+    height: 18px;
+    fill: #ffffff;
+    transition: fill 0.3s ease;
+}
+
+.footer-social a:hover svg {
+    fill: #ffffff;
+}
+
+/* ================================
+   LINK COLUMNS
+================================ */
+
+.footer-links h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0 0 16px 0;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: var(--navbar-button-primary);
+}
+
+/* ================================
+   FOOTER BOTTOM (Copyright)
+================================ */
+
+.footer-bottom {
+    width: 100%;
+    margin-top: 50px;
+    padding: 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-bottom-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+    text-align: center;
+}
+
+.footer-bottom-container p {
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.4);
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ================================
+   FOOTER - TABLET BREAKPOINT
+================================ */
+
+@media (max-width: 1024px) {
+    .footer {
+        padding: 50px 0 0;
+    }
+
+    .footer-container {
+        gap: 30px;
+    }
+
+    .footer-logo span {
+        font-size: 1.3rem;
+    }
+
+    .footer-tagline {
+        font-size: 0.85rem;
+    }
+
+    .footer-social a {
+        width: 32px;
+        height: 32px;
+    }
+
+    .footer-social a svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .footer-links h4 {
+        font-size: 1rem;
+    }
+
+    .footer-links ul li a {
+        font-size: 0.85rem;
+    }
+}
+
+
+/* ================================
+   FOOTER - MOBILE BREAKPOINT
+================================ */
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 40px 0 0;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px 40px;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+        gap: 12px;
+    }
+
+    .footer-logo span {
+        font-size: 1.2rem;
+    }
+
+    .footer-tagline {
+        font-size: 0.85rem;
+    }
+
+    .footer-social {
+        gap: 10px;
+    }
+
+    .footer-social a {
+        width: 36px;
+        height: 36px;
+    }
+
+    .footer-social a svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .footer-links h4 {
+        font-size: 1rem;
+        margin-bottom: 12px;
+    }
+
+    .footer-links ul li {
+        margin-bottom: 8px;
+    }
+
+    .footer-links ul li a {
+        font-size: 0.85rem;
+    }
+
+    .footer-bottom {
+        margin-top: 40px;
+        padding: 16px 0;
+    }
+
+    .footer-bottom-container p {
+        font-size: 0.8rem;
+    }
+}
+
+
+/* ================================
+   FOOTER - SMALL PHONES
+================================ */
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 30px 0 0;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 0 4%;
+    }
+
+    .footer-brand {
+        gap: 10px;
+        text-align: center;
+    }
+
+    .footer-logo {
+        justify-content: center;
+    }
+
+    .footer-logo span {
+        font-size: 1.1rem;
+    }
+
+    .footer-tagline {
+        font-size: 0.8rem;
+    }
+
+    .footer-social {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .footer-social a {
+        width: 38px;
+        height: 38px;
+    }
+
+    .footer-social a svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .footer-links {
+        text-align: center;
+    }
+
+    .footer-links h4 {
+        font-size: 0.95rem;
+        margin-bottom: 10px;
+    }
+
+    .footer-links ul li {
+        margin-bottom: 6px;
+    }
+
+    .footer-links ul li a {
+        font-size: 0.8rem;
+    }
+
+    .footer-bottom {
+        margin-top: 30px;
+        padding: 14px 0;
+    }
+
+    .footer-bottom-container p {
+        font-size: 0.7rem;
+    }
+}
+
+
+/* ================================
+   FOOTER - VERY SMALL PHONES
+================================ */
+
+@media (max-width: 360px) {
+    .footer {
+        padding: 25px 0 0;
+    }
+
+    .footer-container {
+        gap: 20px;
+        padding: 0 3%;
+    }
+
+    .footer-logo img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .footer-logo span {
+        font-size: 1rem;
+    }
+
+    .footer-tagline {
+        font-size: 0.75rem;
+    }
+
+    .footer-social a {
+        width: 32px;
+        height: 32px;
+    }
+
+    .footer-social a svg {
+        width: 14px;
+        height: 14px;
+    }
+
+    .footer-links h4 {
+        font-size: 0.85rem;
+    }
+
+    .footer-links ul li a {
+        font-size: 0.75rem;
+    }
+
+    .footer-bottom {
+        margin-top: 25px;
+        padding: 12px 0;
+    }
+
+    .footer-bottom-container p {
+        font-size: 0.65rem;
+    }
+}
