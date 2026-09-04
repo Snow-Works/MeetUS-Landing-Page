@@ -336,3 +336,280 @@
 
 
 
+
+
+
+
+
+
+
+/* ================================
+   TESTIMONIAL SECTION
+================================ */
+
+.testimonial-section {
+    width: 100%;
+    padding: 80px 0;
+    background-color: var(--hero-section-background);
+}
+
+.testimonial-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.testimonial-content {
+    flex: 1;
+    max-width: 55%;
+}
+
+.testimonial-quote {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #4D4D4D;
+    line-height: 1.7;
+    margin: 0 0 25px 0;
+    font-style: normal;
+}
+
+.author-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #263238;
+    margin: 0 0 4px 0;
+}
+
+.author-title {
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: #4D4D4D;
+    margin: 0 0 20px 0;
+}
+
+.testimonial-cta {
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--navbar-button-primary);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.testimonial-cta:hover {
+    color: #1E8C6A;
+    transform: translateX(4px);
+}
+
+.testimonial-image {
+    flex: 0 0 35%;
+    max-width: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimonial-image img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ================================
+   TESTIMONIAL - TABLET BREAKPOINT
+================================ */
+
+@media (max-width: 1024px) {
+    .testimonial-section {
+        padding: 60px 0;
+    }
+
+    .testimonial-container {
+        gap: 40px;
+    }
+
+    .testimonial-content {
+        max-width: 58%;
+    }
+
+    .testimonial-quote {
+        font-size: 0.95rem;
+    }
+
+    .author-name {
+        font-size: 1rem;
+    }
+
+    .author-title {
+        font-size: 0.9rem;
+    }
+
+    .testimonial-image {
+        flex: 0 0 32%;
+        max-width: 32%;
+    }
+
+    .testimonial-image img {
+        max-width: 200px;
+    }
+}
+
+
+/* ================================
+   TESTIMONIAL - MOBILE BREAKPOINT
+================================ */
+
+@media (max-width: 768px) {
+    .testimonial-section {
+        padding: 50px 0;
+    }
+
+    .testimonial-container {
+        gap: 30px;
+    }
+
+    .testimonial-content {
+        max-width: 60%;
+    }
+
+    .testimonial-quote {
+        font-size: 0.9rem;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+
+    .author-name {
+        font-size: 0.95rem;
+    }
+
+    .author-title {
+        font-size: 0.85rem;
+        margin-bottom: 15px;
+    }
+
+    .testimonial-cta {
+        font-size: 0.9rem;
+    }
+
+    .testimonial-image {
+        flex: 0 0 30%;
+        max-width: 30%;
+    }
+
+    .testimonial-image img {
+        max-width: 160px;
+    }
+}
+
+
+/* ================================
+   TESTIMONIAL - SMALL PHONES
+================================ */
+
+@media (max-width: 480px) {
+    .testimonial-section {
+        padding: 40px 0;
+    }
+
+    .testimonial-container {
+        gap: 20px;
+        padding: 0 4%;
+    }
+
+    .testimonial-content {
+        max-width: 62%;
+    }
+
+    .testimonial-quote {
+        font-size: 0.8rem;
+        line-height: 1.5;
+        margin-bottom: 15px;
+    }
+
+    .author-name {
+        font-size: 0.85rem;
+    }
+
+    .author-title {
+        font-size: 0.75rem;
+        margin-bottom: 12px;
+    }
+
+    .testimonial-cta {
+        font-size: 0.8rem;
+    }
+
+    .testimonial-image {
+        flex: 0 0 28%;
+        max-width: 28%;
+    }
+
+    .testimonial-image img {
+        max-width: 120px;
+    }
+}
+
+
+/* ================================
+   TESTIMONIAL - VERY SMALL PHONES
+================================ */
+
+@media (max-width: 360px) {
+    .testimonial-section {
+        padding: 30px 0;
+    }
+
+    .testimonial-container {
+        gap: 15px;
+        padding: 0 3%;
+    }
+
+    .testimonial-content {
+        max-width: 65%;
+    }
+
+    .testimonial-quote {
+        font-size: 0.7rem;
+        line-height: 1.5;
+        margin-bottom: 12px;
+    }
+
+    .author-name {
+        font-size: 0.75rem;
+    }
+
+    .author-title {
+        font-size: 0.65rem;
+        margin-bottom: 10px;
+    }
+
+    .testimonial-cta {
+        font-size: 0.7rem;
+    }
+
+    .testimonial-image {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+
+    .testimonial-image img {
+        max-width: 100px;
+    }
+}
+
+
