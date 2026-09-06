@@ -752,17 +752,10 @@
 
 
 
+/* FOOTER SECTION RESPONSIVENESS */
 
 
-
-
-
-
-
-
-/* ================================
-   FOOTER - TABLET BREAKPOINT
-================================ */
+/* laptop and desktop screen size */
 
 @media (max-width: 1024px) {
     .footer {
@@ -801,9 +794,7 @@
 }
 
 
-/* ================================
-   FOOTER - MOBILE BREAKPOINT
-================================ */
+/* tablet screen size  */
 
 @media (max-width: 768px) {
     .footer {
@@ -866,9 +857,7 @@
 }
 
 
-/* ================================
-   FOOTER - SMALL PHONES
-================================ */
+/* mobile screen size */
 
 @media (max-width: 480px) {
     .footer {
@@ -941,9 +930,7 @@
 }
 
 
-/* ================================
-   FOOTER - VERY SMALL PHONES
-================================ */
+/* very small screen sizes */
 
 @media (max-width: 360px) {
     .footer {
