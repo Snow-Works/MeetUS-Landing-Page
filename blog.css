@@ -59,9 +59,7 @@
     gap: 30px;
 }
 
-/* ================================
-   BLOG CARD
-================================ */
+/*  BLOG CARDS SECTION */
 
 .blog-card {
     background: #ffffff;
@@ -89,16 +87,16 @@
 
 .blog-card h3 {
     font-size: 1.1rem;
-    font-weight: 600;
-    color: #263238;
+    font-weight: 450;
+    color: var(--neutral-title-neutral-grey);
     line-height: 1.4;
     padding: 20px 20px 8px;
     margin: 0;
 }
 
-.blog-readmore {
+.blog-read-more {
     display: inline-block;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     font-weight: 500;
     color: var(--navbar-button-primary);
     text-decoration: none;
@@ -106,9 +104,9 @@
     transition: all 0.3s ease;
 }
 
-/* ================================
-   BLOG CARD HOVER EFFECTS
-================================ */
+
+
+/* BLOG CARD HOVER EFFECTS */
 
 .blog-card:hover {
     transform: translateY(-8px);
@@ -117,10 +115,10 @@
 }
 
 .blog-card:hover .blog-card-image img {
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
-.blog-readmore:hover {
+.blog-read-more:hover {
     color: #1E8C6A;
     transform: translateX(4px);
 }
@@ -161,11 +159,9 @@
 
 
 
+/* BLOG SECTION RESPONSIVENESS */
 
-
-/* ================================
-   BLOG - TABLET BREAKPOINT
-================================ */
+/* laptop and desktop screen size */
 
 @media (max-width: 1024px) {
     .blog-section {
@@ -201,9 +197,7 @@
 }
 
 
-/* ================================
-   BLOG - MOBILE BREAKPOINT
-================================ */
+/* Tablet screen size  */
 
 @media (max-width: 768px) {
     .blog-section {
@@ -244,9 +238,7 @@
 }
 
 
-/* ================================
-   BLOG - SMALL PHONES
-================================ */
+/* mobile section screen sizes */
 
 @media (max-width: 480px) {
     .blog-section {
@@ -290,9 +282,7 @@
 }
 
 
-/* ================================
-   BLOG - VERY SMALL PHONES
-================================ */
+/* very small screen size */
 
 @media (max-width: 360px) {
     .blog-section {
@@ -341,9 +331,7 @@
 
 
 
-/* ================================
-   TESTIMONIAL SECTION
-================================ */
+/* TESTIMONIAL SECTION  */
 
 .testimonial-section {
     width: 100%;
@@ -427,10 +415,10 @@
 
 
 
+/* TESTIMONIAL RESPONSIVENESS */
 
-/* ================================
-   TESTIMONIAL - TABLET BREAKPOINT
-================================ */
+
+/* laptop and desktop screen size */
 
 @media (max-width: 1024px) {
     .testimonial-section {
@@ -468,9 +456,7 @@
 }
 
 
-/* ================================
-   TESTIMONIAL - MOBILE BREAKPOINT
-================================ */
+/* tablet screen size */
 
 @media (max-width: 768px) {
     .testimonial-section {
@@ -515,9 +501,7 @@
 }
 
 
-/* ================================
-   TESTIMONIAL - SMALL PHONES
-================================ */
+/* mobile screen size  */
 
 @media (max-width: 480px) {
     .testimonial-section {
@@ -563,9 +547,7 @@
 }
 
 
-/* ================================
-   TESTIMONIAL - VERY SMALL PHONES
-================================ */
+/* very small mobile screen size */
 
 @media (max-width: 360px) {
     .testimonial-section {
@@ -623,9 +605,7 @@
 
 
 
-/* ================================
-   FOOTER
-================================ */
+/* FOOTER  */
 
 .footer {
     width: 100%;
