@@ -605,7 +605,7 @@
 
 
 
-/* FOOTER  */
+/* FOOTER   SECTION */
 
 .footer {
     width: 100%;
@@ -622,9 +622,7 @@
     gap: 40px;
 }
 
-/* ================================
-   BRAND COLUMN
-================================ */
+/*  Brand logo column */
 
 .footer-brand {
     display: flex;
@@ -658,9 +656,7 @@
     line-height: 1.5;
 }
 
-/* ================================
-   SOCIAL ICONS
-================================ */
+/* social media icons */
 
 .footer-social {
     display: flex;
@@ -695,9 +691,7 @@
     fill: #ffffff;
 }
 
-/* ================================
-   LINK COLUMNS
-================================ */
+/* link columns  */
 
 .footer-links h4 {
     font-size: 1.1rem;
@@ -728,9 +722,7 @@
     color: var(--navbar-button-primary);
 }
 
-/* ================================
-   FOOTER BOTTOM (Copyright)
-================================ */
+/* footer bottom section */
 
 .footer-bottom {
     width: 100%;
