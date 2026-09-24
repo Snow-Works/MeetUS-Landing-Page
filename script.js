@@ -119,7 +119,7 @@ const indicators= document.querySelectorAll('.hero-indicator');
 const heroCarousel = document.getElementById('heroCarousel');
 
 let currentSlide = 0;  // this is indicating which slide is active wether (0, 1, 0r 2)
-const totalSlides = 3; // this is indicating the total number of slides we have 
+const totalSlides = slides.length; // this is indicating the total number of slides we have 
 let autoPlayTimer = null; // this will store the timer reference 
 let isPaused = false;     // this will be checking if the autoplay is paused
 
@@ -186,36 +186,46 @@ function prevSlide() {
 
 
 function startAutoPlay() {
-    // Clear any existing timer to prevent multiple timers running
+    // Clear any existing timer
     if (autoPlayTimer) {
         clearInterval(autoPlayTimer);
         autoPlayTimer = null;
     }
-    
-    // Start a new timer
-    autoPlayTimer = setInterval(() => {
-        if (!isPaused) {
+
+    // Only start if not paused
+    if (!isPaused) {
+        autoPlayTimer = setInterval(() => {
             nextSlide();
-        }
-    }, 6000);  // 6000ms = 6 seconds
+        }, 6000);
+    }
 }
 
 function pauseAutoPlay() {
     isPaused = true;
-}
 
-function resumeAutoPlay() {
-    isPaused = false;
-}
-
-function resetAutoPlayTimer() {
-    // Clear the current timer
+    // Stop the timer completely
     if (autoPlayTimer) {
         clearInterval(autoPlayTimer);
         autoPlayTimer = null;
     }
-    // Start a fresh timer
-    startAutoPlay();
+}
+
+function resumeAutoPlay() {
+    isPaused = false;
+    startAutoPlay(); // fresh 6-second cycle
+}
+
+
+function resetAutoPlayTimer() {
+    if (autoPlayTimer) {
+        clearInterval(autoPlayTimer);
+        autoPlayTimer = null;
+    }
+
+    // Only restart if not currently paused
+    if (!isPaused) {
+        startAutoPlay();
+    }
 }
 
 
@@ -262,13 +272,14 @@ heroCarousel.addEventListener('touchend', () => {
 
 
 function initCarousel() {
-    // Ensure Slide 1 is active (in case the HTML has changed)
+    if (totalSlides === 0) {
+        console.warn('No hero slides found.');
+        return;
+    }
+
     goToSlide(0);
-    
-    // Start auto-play
     startAutoPlay();
-    
-    // Log success
+
     console.log('🚀 Carousel initialized successfully!');
     console.log(`📊 ${totalSlides} slides loaded`);
     console.log(`⏱️ Auto-play: 6 seconds per slide`);
