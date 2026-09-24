@@ -54,12 +54,13 @@
 
 /* SCROLLING LOGO  WRAPPER SECTION */
 
-.scroll-track-wrapper {
+.clients-logos {
     width: 100%;
-    overflow: hidden;
+    overflow: hidden; /* This stops the page from stretching */
     position: relative;
     padding: 20px 0;
 }
+
 
 
 /* moving element section */
@@ -67,9 +68,11 @@
 .scroll-track {
     display: flex;
     gap: 40px;
-    width: auto;
+    width: max-content; /* Ensures the track stretches to fit all logos */
+    min-width: 100%;
     animation: scrollLogos 25s linear infinite;
 }
+
 
 /* each logo styling */
 
